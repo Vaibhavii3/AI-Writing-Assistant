@@ -181,20 +181,24 @@ const TextProcessor = () => {
     editorSection: {
       display: 'grid',
       gridTemplateColumns: '1fr',
-      gap: '2rem'
+      gap: '2rem',
+      alignItems: 'start',
     },
     
     editorSectionWithResult: {
-      gridTemplateColumns: '1fr 1fr'
+      gridTemplateColumns: '1fr 1fr',
+      alignItems: 'start'
     },
     
     editorContainer: {
       backgroundColor: '#faf8f3',
       borderRadius: '16px',
       boxShadow: '0 8px 30px rgba(107, 91, 61, 0.12)',
-      overflow: 'hidden',
+      // overflow: 'hidden',
       border: '1px solid #d4c4a8',
-      transition: 'all 0.3s ease'
+      transition: 'all 0.3s ease',
+      display: 'flex',
+      flexDirection: 'column'
     },
     
     editorHeader: {
@@ -234,7 +238,9 @@ const TextProcessor = () => {
       fontFamily: 'inherit',
       backgroundColor: '#faf8f3',
       color: '#4a4035',
-      minHeight: '300px'
+      minHeight: '300px',
+      flex: '1',
+      boxSizing: 'border-box'
     },
     
     resultText: {
@@ -244,7 +250,9 @@ const TextProcessor = () => {
       color: '#4a4035',
       whiteSpace: 'pre-wrap',
       backgroundColor: '#faf8f3',
-      minHeight: '300px'
+      minHeight: '300px',
+      flex: '1',
+      overflowY: 'auto'
     },
     
     copyButton: {
